@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/web"
+    },
+    {
+      "path": "./libs/shared"
+    },
+    {
+      "path": "./libs/ui"
+    }
+  ]
+}

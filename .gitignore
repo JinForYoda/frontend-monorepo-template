@@ -1,0 +1,15 @@
+node_modules
+.nx
+dist
+coverage
+storybook-static
+.turbo
+tmp
+.DS_Store
+.idea
+.env
+.env.*
+!.env.example
+
+vite.config.*.timestamp*
+vitest.config.*.timestamp*
