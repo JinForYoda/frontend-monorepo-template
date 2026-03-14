@@ -1,0 +1,48 @@
+name: Bug report
+description: Report a problem in the template or starter workflow
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting an issue. Please include enough detail for someone else to reproduce it quickly.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken?
+      placeholder: The generated workspace fails during...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: List the exact steps to reproduce the issue.
+      placeholder: |
+        1. Create a repo from this template
+        2. Run bun install
+        3. Run bunx nx serve web
+        4. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: The workspace should...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Bun version, Node version if relevant
+      placeholder: macOS 15, Bun 1.3.3
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Logs, screenshots or anything else that can help

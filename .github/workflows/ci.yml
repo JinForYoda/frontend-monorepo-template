@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Sync Nx workspace
+        run: bunx nx sync:check
+
+      - name: Lint, test and build starter projects
+        run: bunx nx run-many -t lint test build --projects=web,ui,shared --parallel=3
+
+      - name: Build Storybook
+        run: bunx nx build-storybook ui

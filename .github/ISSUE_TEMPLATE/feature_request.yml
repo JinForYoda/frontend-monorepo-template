@@ -1,0 +1,37 @@
+name: Feature request
+description: Suggest an improvement for the template
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose additions that would improve the starter without adding unnecessary product-specific complexity.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What workflow or gap does this request address?
+      placeholder: Teams starting from the template still need to...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What should be added or changed?
+      placeholder: Add a new shared lib for...
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Tradeoffs
+      description: What complexity or maintenance cost would this add?
+      placeholder: This would add one more dependency and...
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional alternatives or simpler options
